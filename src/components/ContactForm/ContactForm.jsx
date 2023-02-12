@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import propTypes from 'prop-types';
 import css from './ContactForm.module.css';
 
-export default function ContactForm(onSubmit) {
+export default function ContactForm({ onSubmit }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -32,7 +32,7 @@ export default function ContactForm(onSubmit) {
       number: number,
     };
 
-    onSubmit = { newContact };
+    onSubmit(newContact);
 
     setName('');
     setNumber('');

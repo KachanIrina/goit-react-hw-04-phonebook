@@ -10,7 +10,7 @@ export const ContactsList = ({ contacts, deleteContact }) => (
         number={contact.number}
         deleteContact={deleteContact}
         id={contact.id}
-      ></ContactListItem>
+      />
     ))}
   </ul>
 );
