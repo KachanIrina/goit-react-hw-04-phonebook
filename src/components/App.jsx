@@ -67,10 +67,7 @@ export default function App() {
         <ContactFilter value={filter} onChange={findContact} />
       )}
 
-      <ContactsList
-        contacts={filterContacts(contacts)}
-        deleteContact={deleteContact}
-      />
+      <ContactsList contacts={filterContacts()} deleteContact={deleteContact} />
 
       {contacts.length === 0 && <p>There are no contacts!</p>}
     </div>
